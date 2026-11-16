@@ -1,6 +1,6 @@
 // VariadicSum.cpp
-// Your name
-// Submission date
+// Ian Scarberry
+// 11/15/2026
 // Call variadic template function to calculate the sum of numeric arguments
 
 #include <iostream>
@@ -14,6 +14,13 @@ int sum_args() {
 
 // Recursive case: sum the first argument with the sum of the remaining arguments
 // Add your code here...
+//Use Variadic template to handle any number of args
+template<typename... Args>
+//Use auto to handle different types
+auto sum_args(Args... args) {
+    //Sum and return all passed args
+    return (args+ ...);
+}
 
 int main() {
     // Test cases
